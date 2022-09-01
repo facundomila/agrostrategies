@@ -8,7 +8,7 @@ class MainComponent extends Component {
         super(props)
         this.step = this.setStep();
         this.state = {
-            pH: 45,
+            pH: '',
             NO3: '',
             CiC: '',
             Nt: '',
@@ -31,7 +31,7 @@ class MainComponent extends Component {
     setStep() {
         return 0;
     }
-
+    //https://www.pluralsight.com/guides/how-to-use-react-to-set-the-value-of-an-input
     onInputchange(event) {
         console.log(event);
         this.setState({
@@ -70,9 +70,9 @@ class MainComponent extends Component {
         const handleChange = (val) => {
             setValue(val);
         }; */
-        const handleChange = (val) => {
+        /* const handleChange = (val) => {
             setValue(val);
-        };
+        }; */
 
         return (
             <Container>
@@ -91,13 +91,13 @@ class MainComponent extends Component {
                                 return true;
                             }}
                         />
-                        <Input size="sm" placeholder="pH" name="pH" type="text" value={this.state.pH} onChange={handleChange()} />
-                        <Input size="sm" placeholder="NO3" name="NO3" type="text" value={this.state.NO3} onChange={this.onInputchange} />
-                        <Input size="sm" placeholder="CiC" name="CiC" type="text" value={this.state.CiC} onChange={this.onInputchange} />
-                        <Input size="sm" placeholder="Nt" name="Nt" type="text" value={this.state.Nt} onChange={this.onInputchange} />
-                        <Input size="sm" placeholder="MO" name="MO" type="text" value={this.state.MO} onChange={this.onInputchange} />
-                        <Input size="sm" placeholder="P" name="P" type="text" value={this.state.P} onChange={this.onInputchange} />
-                        <Input size="sm" placeholder="Fe" name="Fe" type="text" value={this.state.Fe} onChange={this.onInputchange} />
+                        <input size="sm" placeholder="pH" name="pH" type="text" value={this.state.pH} onChange={this.onInputchange} />
+                        <input size="sm" placeholder="NO3" name="NO3" type="text" value={this.state.NO3} onChange={this.onInputchange} />
+                        <input size="sm" placeholder="CiC" name="CiC" type="text" value={this.state.CiC} onChange={this.onInputchange} />
+                        <input size="sm" placeholder="Nt" name="Nt" type="text" value={this.state.Nt} onChange={this.onInputchange} />
+                        <input size="sm" placeholder="MO" name="MO" type="text" value={this.state.MO} onChange={this.onInputchange} />
+                        <input size="sm" placeholder="P" name="P" type="text" value={this.state.P} onChange={this.onInputchange} />
+                        <input size="sm" placeholder="Fe" name="Fe" type="text" value={this.state.Fe} onChange={this.onInputchange} />
                         <Button appearance="primary" type="submit" onClick={this.onSubmitForm}>
                             Submit
                         </Button>
