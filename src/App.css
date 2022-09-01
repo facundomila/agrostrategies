@@ -1,0 +1,145 @@
+:root {
+  --pitch-dark: #2d2d3c;
+  --white: #ffffff;
+  --dark: #45455b;
+  --dark-highlight: #4b4b5f;
+  --highlight: #5b5b78;
+  --midtone: #c8c8eb;
+  --midtone-highlight: #ebebff;
+
+  /* buttons and alerts */
+
+  --selected: #4986d2;
+  --success: #43b760;
+  --error: #ff1d25;
+  --warning: #ffd200;
+  --emphasys: #29abe2;
+}
+*::-webkit-scrollbar {
+  width: 7px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #002e45;
+}
+
+*::-webkit-scrollbar-track:hover {
+  background: rgb(200, 221, 235);
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #738c99;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #738c99;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--midtone-highlight);
+}
+.animated-logo {
+  animation: rotation infinite 1s 1s;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+code {
+  font-family: "Open Sans", sans-serif;
+}
+/*----titulos----*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  text-align: center;
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+/*---------Background---------*/
+.pitch-dark-bg {
+  background-color: var(--pitch-dark);
+}
+
+.dark-bg {
+  background-color: var(--dark);
+}
+
+.dark-highlight-bg {
+  background-color: var(--dark-highlight);
+}
+
+.white-bg {
+  background-color: var(--white);
+}
+
+.highlight-bg {
+  background-color: var(--highlight);
+}
+.pitch-dark-bg,
+.dark-bg,
+.dark-highlight-bg,
+.highlight-bg {
+  color: var(--midtone-highlight);
+}
+
+.midtone-bg {
+  background-color: var(--midtone);
+}
+.midtone-highlight-bg {
+  background-color: var(--midtone-highlight);
+}
+.selected-bg {
+  background-color: var(--selected);
+}
+.success-bg {
+  background-color: var(--success);
+}
+.error-bg {
+  background-color: var(--error);
+}
+.warning-bg {
+  background-color: var(--warning);
+}
+.emphasys-bg {
+  background-color: var(--emphasys);
+}
+/*-------Font colors-----------*/
+.pitch-dark {
+  color: var(--pitch-dark);
+}
+
+.dark {
+  color: var(--dark);
+}
+
+.dark-highlight {
+  color: var(--dark-highlight);
+}
+
+.white {
+  color: var(--white);
+}
+
+.highlight {
+  color: var(--highlight);
+}
+
+.midtone {
+  color: var(--midtone);
+}
+.midtone-highlight {
+  color: var(--midtone-highlight);
+}
