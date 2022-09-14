@@ -7,7 +7,9 @@ class MainComponent extends Component {
     constructor(props) {
         super(props)
         this.step = this.setStep();
+        this.samples = [];
         this.state = {
+            sample: '',
             pH: '',
             NO3: '',
             CiC: '',
@@ -31,12 +33,12 @@ class MainComponent extends Component {
     setStep() {
         return 0;
     }
+
     //https://www.pluralsight.com/guides/how-to-use-react-to-set-the-value-of-an-input
     onInputchange(event) {
-        console.log(event);
         this.setState({
-            [event.target.name]: event
-        });
+            [event.target.name]: event.target.value
+          })
     }
 
     onSubmitForm() {
@@ -73,7 +75,7 @@ class MainComponent extends Component {
         /* const handleChange = (val) => {
             setValue(val);
         }; */
-
+        
         return (
             <Container>
                 <Header>
@@ -91,13 +93,55 @@ class MainComponent extends Component {
                                 return true;
                             }}
                         />
-                        <input size="sm" placeholder="pH" name="pH" type="text" value={this.state.pH} onChange={this.onInputchange} />
-                        <input size="sm" placeholder="NO3" name="NO3" type="text" value={this.state.NO3} onChange={this.onInputchange} />
-                        <input size="sm" placeholder="CiC" name="CiC" type="text" value={this.state.CiC} onChange={this.onInputchange} />
-                        <input size="sm" placeholder="Nt" name="Nt" type="text" value={this.state.Nt} onChange={this.onInputchange} />
-                        <input size="sm" placeholder="MO" name="MO" type="text" value={this.state.MO} onChange={this.onInputchange} />
-                        <input size="sm" placeholder="P" name="P" type="text" value={this.state.P} onChange={this.onInputchange} />
-                        <input size="sm" placeholder="Fe" name="Fe" type="text" value={this.state.Fe} onChange={this.onInputchange} />
+                        <label>Nombre: <input
+                            name="sample"
+                            type="text"
+                            value={this.state.sample}
+                            onChange={this.onInputchange}
+                        /></label>
+                        <label>pH<input
+                            name="pH"
+                            type="number"
+                            value={this.state.pH}
+                            onChange={this.onInputchange}
+                        /></label>
+                        <label>NO3<input
+                            name="NO3"
+                            type="number"
+                            value={this.state.NO3}
+                            onChange={this.onInputchange}
+                        /></label>
+                        <label>CiC <input
+                            name="CiC"
+                            type="number"
+                            value={this.state.CiC}
+                            onChange={this.onInputchange}
+                        /></label>
+                        <label>Nt <input
+                            name="Nt"
+                            type="number"
+                            value={this.state.Nt}
+                            onChange={this.onInputchange}
+                        /></label>
+                        <label>MO <input
+                            name="MO"
+                            type="number"
+                            value={this.state.MO}
+                            onChange={this.onInputchange}
+                        /></label>
+                        <label>P <input
+                            name="P"
+                            type="number"
+                            value={this.state.P}
+                            onChange={this.onInputchange}
+                        /></label>
+                        <label>Fe<input
+                            name="Fe"
+                            type="number"
+                            value={this.state.Fe}
+                            onChange={this.onInputchange}
+                        /></label>
+                        
                         <Button appearance="primary" type="submit" onClick={this.onSubmitForm}>
                             Submit
                         </Button>
